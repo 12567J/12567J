@@ -1,0 +1,31 @@
+Píton
+Clube de classeSocial:
+ def __init__(self): 
+ self.membros = {} 
+
+      def adicionar_membro(self, nome, mensalidade):  
+          self.membros[nome] = {'mensalidade': mensalidade, 'pago': False}  
+
+      def pagar_mensalidade(self, nome):  
+ se um em self.membros: 
+ self.membros[nome]['pago'] = Verdadeiro 
+              print(f'Mensalidade paga com sucesso por {nome}.')  
+ Mais: 
+              print('Membro não encontrado.')  
+
+      def status_mensalidade(self, nome):  
+ se um em self.membros: 
+ status = 'paga' se self.membros[nome]['pago'] else 'não paga' 
+              print(f'A mensalidade de {nome} está {status}.')  
+ Mais: 
+              print('Membro não encontrado.')  
+
+# Exemplo de uso
+clube = ClubeSocial()
+clube.adicionar_membro('João', 100)
+clube.adicionar_membro('Maria', 150)
+
+clube.status_mensalidade('João')
+clube.pagar_mensalidade('João')
+clube.status_mensalidade('João')
+```
