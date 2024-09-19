@@ -1,0 +1,72 @@
+
+Código em `index.html`
+
+HTML
+<! DOCTYPE html>
+<html lang=pt-BR>
+<cabeça>
+ <meta charset=UTF-8> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <title>Gerenciador de Tarefas</title> 
+<cabeça>
+<Corpo>
+     <h1>Gerenciador de Tarefas</h1> 
+ <tipo de script=Módulo src=TaskManager.js></script> 
+"Corpo"
+<html>
+Javascript
+// taskManager.js
+
+// Classe para representar uma tarefa
+Tarefa de classe {
+ Construtor (título) { 
+ Este.título = título; 
+ This.completado = falso; 
+     } 
+
+     // Método para completar a tarefa 
+     Complete() { 
+ This.completado = verdadeiro; 
+     } 
+}
+
+// Classe para gerenciar as tarefas
+Gerente de tarefas de classe {
+ Construção() { 
+         This.tasks = []; // Usando um array para armazenar tarefas 
+     } 
+
+     // Método para adicionar uma nova tarefa 
+ Adicionar Tarefa (título) { 
+ Const newTask = nova Tarefa (título); 
+         this.tasks.push(newTask); // Usando spread operator para adicionar 
+     } 
+
+     // Método para listar todas as tarefas 
+ ListaTarefas() { 
+ retorno this.tasks.map(task => ${task.title} - ${task.completado? ? ?Completa?: ?Pendente?}).join(?n?); 
+     } 
+
+     // Método para remover uma tarefa pelo título 
+ remover Tarefa (título) { 
+         this.tasks = this.tasks.filter(task => task.title !== title); // Desestruturação e filtro 
+     } 
+}
+
+// Instância do gerenciador de tarefas
+Const taskManager = novo Gerenciador de Tarefas();
+
+// Adicionando algumas tarefas
+taskManager.addTask (JavScript Estudar);
+taskManager.addTask(‘Praticar programação’);
+taskManager.addTask(?Fazer exercícios?);
+
+// Listando as tarefas
+Console.log(taskManager.listTasks());
+
+// Removendo uma tarefa
+taskManager.removeTask(‘Praticar programação’);
+
+// Listando as tarefas novamente
+Console.log(taskManager.listTasks());
+
